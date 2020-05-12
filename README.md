@@ -251,5 +251,3 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
             ![close-connection](docs/close-connection.png)
             Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.     
         
-
-
