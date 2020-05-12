@@ -277,4 +277,12 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
     * Entrar no diretório de trabalho.
         `$ cd ~/AcademiaNeon_DevOps/ `
     * Executar o comando abaixo que dará permissão full para qualquer usuário em todas as pastas e arquivos do diretório que estiver.
-        `$ chmod -R 777 * `     
+        `$ chmod -R 777 * `
+
+4. Para apagar a VM 
+    * Entrar no diretório onde criou a VM, 
+        `$ cd ~/AcademiaNeon_DevOps/desktop-devops `  
+
+        `$ vagrant destroy `
+
+        ![vagrant-destroy](docs/vagrant-destroy.png)
