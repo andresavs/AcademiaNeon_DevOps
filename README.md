@@ -39,7 +39,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
         * Criar/Subir a vm: 
             * `$ vagrant up `
 
-                ![vagrant-up](docs/vagrant-up.png =100x20)
+                ![vagrant-up](docs/vagrant-up.png)
 
         * Validar status vm:
             * `$ vagrant status `   
