@@ -98,6 +98,7 @@ Testar Instalação
 
 Validar Versão - Ansible 2.9.7 
 * `$ ansible --version `
+
 ![ansible-version](docs/ansible--version.png)
 
 
@@ -162,7 +163,8 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
       <b>Importante</b>: Fazer o download das informações.
 
    3. Configurar o AWS CLI
-     * `$ aws configure`
+     * `$ aws configure `
+     
      Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
 
      <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
@@ -170,7 +172,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
      <i>Default region name [None]: us-east-1</i> 
      <i>Default output format [None]: json</i>
 
-     ![aws-configure](docs/aws-configure.png)
+    ![aws-configure](docs/aws-configure.png)
 
    4. Alguns comandos para testar:
      * `$ aws iam list-access-keys` 
