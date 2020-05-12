@@ -205,12 +205,15 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
     * Primeiro Acesso:
         * Após instalar, conectar na vm com o user ubuntu e apertar F1 no vscode (ou dependendo do computador fn + F1).
+            
             ![remote-ssh](docs/f1-remote.png)
 
         * <b>No primeiro acesso</b> será necessário configurar o host.
+            
             ![configure-host](docs/configure-host.png)   
         
         * Ao selecionar o item Configure SSH Hosts...
+            
             ![arquivo-conf](docs/arquivo-config.png)
 
         * Na pasta docs temos dois exemplos de documentos.
@@ -222,37 +225,52 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
         * Selecionar o host. 
             Apertar F1 no vscode (ou dependendo do computador fn + F1) e escolher o item 127.0.0.1 ou como você chamou no arquivo config.
+            
             ![remote-ssh](docs/f1-remote.png)
+            
             ![host](docs/selecionar-host.png)  
 
         * Uma nova janela do vscode irá abrir e ficará tentando a conexão, <b>no primeiro acesso</b> algumas opções devem aparecer e será necessário selecionar.
             Para Windows escolher Linux e depois Continue, ou apenas continue, caso não apareça. 
+            
             ![config-host-adicionais](docs/Linux--Continue.png) 
 
         * Após conectado nesta nova janela ir em "File → Open..." e escolher seu diretório de trabalho da vm.
+            
             ![file](docs/file-open.png)    
+            
             Sua área de trabalho no vscode ficará da seguinte forma:
+            
             ![vscode-remote](docs/vscode-remote.png) 
 
         * Para desconectar, basta clicar no icone verde no canto inferior e ir para Close Remote Connection.
+
             ![close-connection](docs/close-connection.png)
+
             Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.
 
     * Acesso após configuração inicial.   
         * Apertar F1 no vscode (ou dependendo do computador fn + F1).
+
             ![remote-ssh](docs/f1-remote.png)
 
         * Selecionar o host. 
             Escolher o item 127.0.0.1 ou como você chamou no arquivo config.
+
             ![host](docs/selecionar-host.png)  
 
         * Uma nova janela do vscode irá abrir e ficará tentando a conexão. Após conectado nesta nova janela ir em "File → Open..." e escolher seu diretório de trabalho da vm.
+
             ![file](docs/file-open.png)    
+
             Sua área de trabalho no vscode ficará da seguinte forma:
+
             ![vscode-remote](docs/vscode-remote.png) 
 
         * Para desconectar, basta clicar no icone verde no canto inferior e ir para Close Remote Connection.
+            
             ![close-connection](docs/close-connection.png)
+            
             Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup. 
 
 3. Caso tenha problemas para editar os arquivos via Remote - SSH no vscode, acessar sua VM conforme item 3 do Setup.
