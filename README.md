@@ -205,7 +205,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
     * Primeiro Acesso:
         * Após instalar, conectar na vm com o user ubuntu e apertar F1 no vscode (ou dependendo do computador fn + F1).
-            ![remote-ssh](docs/f1-remote.png)
+            ![remote-ssh](docs/f1-remote.jpg)
 
         * <b>No primeiro acesso</b> será necessário configurar o host.
             ![configure-host](docs/configure-host.png)   
@@ -222,7 +222,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
         * Selecionar o host. 
             Apertar F1 no vscode (ou dependendo do computador fn + F1) e escolher o item 127.0.0.1 ou como você chamou no arquivo config.
-            ![remote-ssh](docs/f1-remote.png)
+            ![remote-ssh](docs/f1-remote.jpg)
             ![host](docs/selecionar-host.png)  
 
         * Uma nova janela do vscode irá abrir e ficará tentando a conexão, <b>no primeiro acesso</b> algumas opções devem aparecer e será necessário selecionar.
@@ -240,7 +240,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
     * Acesso após configuração inicial.   
         * Apertar F1 no vscode (ou dependendo do computador fn + F1).
-            ![remote-ssh](docs/f1-remote.png)
+            ![remote-ssh](docs/f1-remote.jpg)
 
         * Selecionar o host. 
             Escolher o item 127.0.0.1 ou como você chamou no arquivo config.
@@ -253,4 +253,10 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
         * Para desconectar, basta clicar no icone verde no canto inferior e ir para Close Remote Connection.
             ![close-connection](docs/close-connection.png)
-            Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.           
+            Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup. 
+
+3. Caso tenha problemas para editar os arquivos via Remote - SSH no vscode, acessar sua VM conforme item 3 do Setup.
+    * Entrar no diretório de trabalho.
+        `$ cd ~/AcademiaNeon_DevOps/ `
+    * Executar o comando abaixo que dará permissão full para qualquer usuário em todas as pastas e arquivos do diretório que estiver.
+        `$ chmod -R 777 * `     
