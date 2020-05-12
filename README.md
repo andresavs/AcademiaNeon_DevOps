@@ -10,24 +10,24 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 1. Realizar o clone desse projeto na sua pasta de trabalho.
 
 2. Abrir o VSCode e via terminal acessar pasta de trabalho.
-    1.1 Comandos MacOS - Neste exemplo, a pasta de trabalho é o home do usuário.
+  2.1 Comandos MacOS - Neste exemplo, a pasta de trabalho é o home do usuário.
        * `$ cd ~/AcademiaNeon_DevOps `
        * `$ pwd `
          Exemplo resultado: /home/user/AcademiaNeon_DevOps 
        * `$ ls AcademiaNeon_DevOps`
          Exemplo resultado: LICENSE       README.md       ansible.cfg         desktop-devops       install_ansible.sh  inventory       playbooks
     
-    1.2 Comandos Windows - Neste exemplo, a pasta de trabalho é desktop do usuário
+    2.2 Comandos Windows - Neste exemplo, a pasta de trabalho é desktop do usuário
        * `PS C:\> cd Users\NomeUsuario\Desktop\AcademiaNeon_DevOps `
        * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps> dir `
           Deve listar todas as pastas e aqrquivos como no Linux.     
 
-2. Acessar a pasta desktop-devops. Criar a VM Linux. Acessar via ssh. Setar usuário ubuntu. 
-  2.1 Comandos MacOS
+3. Acessar a pasta desktop-devops. Criar a VM Linux. Acessar via ssh. Setar usuário ubuntu. 
+  3.1 Comandos MacOS
      Acessar a pasta:   
      * `$ cd desktop-devops`
 
-     Criar/Subir a vm:
+     Criar/Subir a vm: 
      * `$ vagrant up `
 
        ![vagrant-up](docs/vagrant-up.png)
@@ -52,7 +52,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 
        ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
 
-    2.2 Comandos Windows
+    3.2 Comandos Windows
      Acessar a pasta:   
      * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps> cd desktop-devops`
 
@@ -75,12 +75,12 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
        ![vagrant](docs/vagrant.png)
 
      Mudar para usuário ubuntu - Veja que nesse item já estamos logados na vm criado pelo arquivo Vagrantfile
-     * `vagrant@ubuntu-bionic:~$ sudo su - ubuntu `
+    * `vagrant@ubuntu-bionic:~$ sudo su - ubuntu `
 
        ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
 
 
-<b>Importante</b>: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
+    <b>Importante</b>: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
 
 
 ## Instalar Ansible
@@ -155,31 +155,31 @@ Comandos Úteis
 ## Configurar AWSCLI
 Para ter acesso aos recursos da aws via linha de comando em nosso desktop de trabalho é necessário configurar as credenciais do seu usuário. Caso queira, por favor, seguir os passos descritos abaixo:
 
-   1. Caso não tenha ainda será necessário criar uma conta na [AWS](https://portal.aws.amazon.com/billing/signup#/start). 
+ 1. Caso não tenha ainda será necessário criar uma conta na [AWS](https://portal.aws.amazon.com/billing/signup#/start). 
 
       <b>Importante</b>: Após criar a conta, sempre fazer o login com o root user.
 
-   2. Acessar o console da AWS com o user root e ir em:
+ 2. Acessar o console da AWS com o user root e ir em:
 
       * My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
 
       
        <b>Importante</b>: Fazer o download das informações.
 
-   3. Configurar o AWS CLI
+ 3. Configurar o AWS CLI
+    
+    Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
 
      * `$ aws configure `
 
-     Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
+       ![aws-configure](docs/aws-configure.png)
 
-      ![aws-configure](docs/aws-configure.png)
+    <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
+    <i>AWS Secret Access Key [None]: AWSSecretKey</i> 
+    <i>Default region name [None]: us-east-1</i> 
+    <i>Default output format [None]: json</i>   
 
-       <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
-       <i>AWS Secret Access Key [None]: AWSSecretKey</i> 
-       <i>Default region name [None]: us-east-1</i> 
-       <i>Default output format [None]: json</i>
-
-   4. Alguns comandos para testar:
+ 4. Alguns comandos para testar:
      * `$ aws iam list-access-keys` 
      * `$ aws ec2 describe-regions`
 
