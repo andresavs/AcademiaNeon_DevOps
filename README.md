@@ -49,6 +49,8 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
         * Desligar a VM
             * `$ vagrant suspend `
 
+                ![vagrant-suspend](docs/vagrant-suspend.png)
+
         * Conectar na VM via ssh
             * `$ vagrant ssh `
 
@@ -75,6 +77,8 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 
         * Desligar a VM
             * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps\desktop-devops> vagrant suspend `
+
+                ![vagrant-suspend](docs/vagrant-suspend.png)
 
         * Conectar na VM via ssh
             * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps\desktop-devops> vagrant ssh `
@@ -249,5 +253,4 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
         * Para desconectar, basta clicar no icone verde no canto inferior e ir para Close Remote Connection.
             ![close-connection](docs/close-connection.png)
-            Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.     
-        
+            Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.           
