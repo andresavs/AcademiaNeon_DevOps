@@ -275,14 +275,18 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
 3. Caso tenha problemas para editar os arquivos via Remote - SSH no vscode, acessar sua VM conforme item 3 do Setup.
     * Entrar no diretório de trabalho.
+
         `$ cd ~/AcademiaNeon_DevOps/ `
+
     * Executar o comando abaixo que dará permissão full para qualquer usuário em todas as pastas e arquivos do diretório que estiver.
+
         `$ chmod -R 777 * `
-
+        
 4. Para apagar a VM 
-    * Entrar no diretório onde criou a VM, 
-        `$ cd ~/AcademiaNeon_DevOps/desktop-devops `  
+    * Entrar no diretório onde criou a VM.
 
+        `$ cd ~/AcademiaNeon_DevOps/desktop-devops ` 
+         
         `$ vagrant destroy `
 
         ![vagrant-destroy](docs/vagrant-destroy.png)
