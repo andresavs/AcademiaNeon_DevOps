@@ -28,7 +28,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
         * `PS C:\> cd Users\NomeUsuario\Desktop\AcademiaNeon_DevOps `
         
         * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps> dir `
-        
+
             Deve listar todas as pastas e aqrquivos como no Linux.     
 
 3. Acessar a pasta desktop-devops. Criar a VM Linux. Acessar via ssh. Setar usuário ubuntu. 
@@ -190,8 +190,66 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
 
 ## Dicas 
-Para resolver problemas de horário entre VM e EC2 efetuar os comandos abaixo, sair do usuário ubuntu e da vm. E logo após fazer a conexão ssh.
-   * `$ sudo apt install ntpdate `
-   * `$ sudo ntpdate -u pool.ntp.org `
+1. Para resolver problemas de horário entre VM e EC2 efetuar os comandos abaixo, sair do usuário ubuntu e da vm. E logo após fazer a conexão ssh.
+    * `$ sudo apt install ntpdate `
+    * `$ sudo ntpdate -u pool.ntp.org `
+
+
+2. Para utilizar o VSCode para atualizar seu repositório que está vm é necessário baixar e instalar um plugin chamado Remote - SSH. 
+
+    <b>Importante</b>: Sempre estar com a vm ligada e conectada via ssh no usuario ubuntu, item 3 do Setup.
+
+    * Primeiro Acesso:
+        * Após instalar, conectar na vm com o user ubuntu e apertar F1 no vscode (ou dependendo do computador fn + F1).
+            ![remote-ssh](docs/f1-remote.png)
+
+        * <b>No primeiro acesso</b> será necessário configurar o host.
+            ![configure-host](docs/configure-host.png)   
+        
+        * Ao selecionar o item Configure SSH Hosts...
+            ![arquivo-conf](docs/arquivo-config.png)
+
+        * Na pasta docs temos dois exemplos de documentos.
+            * [Windows](https://github.com/andresavs/AcademiaNeon_DevOps/tree/master/docs/config-windows)
+                
+            * [MacOS](https://github.com/andresavs/AcademiaNeon_DevOps/tree/master/docs/config-macos)
+
+            <b>Importante</b> : Alterar de acordo com seu sistema operacional e com o local que fez o git clone do repositório para criar a vm, ou seja, onde voê acessa para executar os comandos vagrant.
+
+        * Selecionar o host. 
+            Apertar F1 no vscode (ou dependendo do computador fn + F1) e escolher o item 127.0.0.1 ou como você chamou no arquivo config.
+            ![remote-ssh](docs/f1-remote.png)
+            ![host](docs/selecionar-host.png)  
+
+        * Uma nova janela do vscode irá abrir e ficará tentando a conexão, <b>no primeiro acesso</b> algumas opções devem aparecer e será necessário selecionar.
+            Para Windows escolher Linux e depois Continue, ou apenas continue, caso não apareça. 
+            ![config-host-adicionais](docs/Linux--Continue.png) 
+
+        * Após conectado nesta nova janela ir em "File → Open..." e escolher seu diretório de trabalho da vm.
+            ![file](docs/file-open.png)    
+            Sua área de trabalho no vscode ficará da seguinte forma:
+            ![vscode-remote](docs/vscode-remote.png) 
+
+        * Para desconectar, basta clicar no icone verde no canto inferior e ir para Close Remote Connection.
+            ![close-connection](docs/close-connection.png)
+            Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.
+
+    * Acesso após configuração inicial.   
+        * Apertar F1 no vscode (ou dependendo do computador fn + F1).
+            ![remote-ssh](docs/f1-remote.png)
+
+        * Selecionar o host. 
+            Escolher o item 127.0.0.1 ou como você chamou no arquivo config.
+            ![host](docs/selecionar-host.png)  
+
+        * Uma nova janela do vscode irá abrir e ficará tentando a conexão. Após conectado nesta nova janela ir em "File → Open..." e escolher seu diretório de trabalho da vm.
+            ![file](docs/file-open.png)    
+            Sua área de trabalho no vscode ficará da seguinte forma:
+            ![vscode-remote](docs/vscode-remote.png) 
+
+        * Para desconectar, basta clicar no icone verde no canto inferior e ir para Close Remote Connection.
+            ![close-connection](docs/close-connection.png)
+            Esta janela irá fechar e você devera sair da vm na outra janela, e dar os comandos para desligar conforme item 3 do Setup.     
+        
 
 

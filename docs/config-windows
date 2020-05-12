@@ -1,0 +1,5 @@
+Host 127.0.0.1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  IdentityFile C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps\.vagrant\machines\default\virtualbox\private_key
