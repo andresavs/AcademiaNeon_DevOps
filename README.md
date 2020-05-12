@@ -1,8 +1,10 @@
 # Configurar Ambiente para Projeto Integrador - Curso DevOps - Academia Neon
 Preparar um ambiente equalizado para o Projeto Integrador da Academia Neon do Curso DevOps. Como cada uma das integrantes do grupo tinham setups diferentes para realizar o trabalho, optamos por construir um mesmo ambiente para todas. Também percebemos que utilizando o vagrant + virtualbox + vscode além de ficar mais fácil de trabalhar, ficava mais leve que criar uma vm com interface gráfica direto no virtual box.
 
+
 ## Softwares Necessários
 Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://vagrantup.com/) + [VirtualBox](http://virtualbox.org/) + [VSCode](https://code.visualstudio.com/). Antes de mais nada será necessário baixar e instalar cada um deles.
+
 
 ## Setup
 1. Realizar o clone desse projeto na sua pasta de trabalho.
@@ -77,7 +79,9 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 
      ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
 
-Importante: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
+
+<b>Importante</b>: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
+
 
 ## Instalar Ansible
 Efetuar o clone do repositório dentro da vm criada.
@@ -95,6 +99,7 @@ Testar Instalação
 Validar Versão - Ansible 2.9.7 
 * `$ ansible --version `
 ![ansible-version](docs/ansible--version.png)
+
 
 ## Configuração Geral + Configurar Ansible
 Atualizar pacotes linux, instalar programas (java, python, awscli) e suas dependencias. 
@@ -117,6 +122,7 @@ Validar instalação do AWSCLI
 * `$ aws `
 
 ![aws](docs/aws.png)
+
 
 ## Instalar Docker
 O docker local não é pré-requisito para o projeto, mas se quiser instalar para utilizar esta vm para estudar, segue orientações.
@@ -144,34 +150,36 @@ Validar status do serviço Jenkins: `$ sudo service jenkins status `
 Validar iniciar serviço Jenkins: `$ sudo service jenkins start` 
 Validar parar serviço Jenkins:`$ sudo service jenkins stop ` 
 
+
 ## Configurar AWSCLI
 Para ter acesso aos recursos da aws via linha de comando em nosso desktop de trabalho é necessário configurar as credenciais do seu usuário. Caso queira, por favor, seguir os passos descritos abaixo:
 
-1. Caso não tenha ainda será necessário criar uma conta na [AWS](https://portal.aws.amazon.com/billing/signup#/start). 
-Importante: Após criar a conta, sempre fazer o login com o root user.
+   1. Caso não tenha ainda será necessário criar uma conta na [AWS](https://portal.aws.amazon.com/billing/signup#/start). 
+      <b>Importante</b>: Após criar a conta, sempre fazer o login com o root user.
 
-2. Acessar o console da AWS com o user root e ir em:
-* My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
-Importante: Fazer o download das informações.
+   2. Acessar o console da AWS com o user root e ir em:
+     * My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
+      <b>Importante</b>: Fazer o download das informações.
 
-3. Configurar o AWS CLI
-* `$ aws configure`
-Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
+   3. Configurar o AWS CLI
+     * `$ aws configure`
+     Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
 
-<i>AWS Access Key ID [None]: AWSAccessKeyId             
-AWS Secret Access Key [None]: AWSSecretKey
-Default region name [None]: us-east-1
-Default output format [None]: json</i>
+     <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
+     <i>AWS Secret Access Key [None]: AWSSecretKey</i> 
+     <i>Default region name [None]: us-east-1</i> 
+     <i>Default output format [None]: json</i>
 
-![aws-configure](docs/aws-configure.png)
+     ![aws-configure](docs/aws-configure.png)
 
-4. Alguns comandos para testar:
-* `$ aws iam list-access-keys` 
-* `$ aws ec2 describe-regions`
+   4. Alguns comandos para testar:
+     * `$ aws iam list-access-keys` 
+     * `$ aws ec2 describe-regions`
+
 
 ## Dicas 
 Para resolver problemas de horário entre VM e EC2 efetuar os comandos abaixo, sair do usuário ubuntu e da vm. E logo após fazer a conexão ssh.
-* `$ sudo apt install ntpdate `
-* `$ sudo ntpdate -u pool.ntp.org `
+   * `$ sudo apt install ntpdate `
+   * `$ sudo ntpdate -u pool.ntp.org `
 
 
