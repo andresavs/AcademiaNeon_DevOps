@@ -30,12 +30,12 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
      Criar/Subir a vm:
      * `$ vagrant up `
 
-     ![vagrant-up](docs/vagrant-up.png)
+       ![vagrant-up](docs/vagrant-up.png)
 
      Validar status vm:
      * `$ vagrant status `   
 
-     ![vagrant-status](docs/vagrant-status.png) 
+       ![vagrant-status](docs/vagrant-status.png) 
 
      Desligar a VM
      * `$ vagrant suspend `
@@ -43,14 +43,14 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
      Conectar na VM via ssh
      * `$ vagrant ssh `
 
-     ![vagrant-ssh](docs/vagrant-ssh.png)
+       ![vagrant-ssh](docs/vagrant-ssh.png)
 
-     ![vagrant](docs/vagrant.png)
+       ![vagrant](docs/vagrant.png)
 
      Mudar para usuário ubuntu - Veja que nesse item já estamos logados na vm criado pelo arquivo Vagrantfile
      * `vagrant@ubuntu-bionic:~$ sudo su - ubuntu `
 
-     ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
+       ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
 
     2.2 Comandos Windows
      Acessar a pasta:   
@@ -62,7 +62,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
      Validar status vm:
      * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps\desktop-devops> vagrant status `
 
-     ![vagrant-status](docs/vagrant-status.png)     
+       ![vagrant-status](docs/vagrant-status.png)     
 
      Desligar a VM
      * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps\desktop-devops> vagrant suspend `
@@ -70,14 +70,14 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
      Conectar na VM via ssh
      * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps\desktop-devops> vagrant ssh `
 
-     ![vagrant-ssh](docs/vagrant-ssh.png)
+       ![vagrant-ssh](docs/vagrant-ssh.png)
 
-     ![vagrant](docs/vagrant.png)
+       ![vagrant](docs/vagrant.png)
 
      Mudar para usuário ubuntu - Veja que nesse item já estamos logados na vm criado pelo arquivo Vagrantfile
      * `vagrant@ubuntu-bionic:~$ sudo su - ubuntu `
 
-     ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
+       ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
 
 
 <b>Importante</b>: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
@@ -87,7 +87,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 Efetuar o clone do repositório dentro da vm criada.
 * `$ git clone https://github.com/andresavs/AcademiaNeon_DevOps.git `
 
-![git-clone](docs/git-clone.png)
+  ![git-clone](docs/git-clone.png)
 
 Executar a instalação do Ansible.
 * `$ bash install_ansible.sh `
@@ -99,30 +99,30 @@ Testar Instalação
 Validar Versão - Ansible 2.9.7 
 * `$ ansible --version `
 
-![ansible-version](docs/ansible--version.png)
+  ![ansible-version](docs/ansible--version.png)
 
 
 ## Configuração Geral + Configurar Ansible
 Atualizar pacotes linux, instalar programas (java, python, awscli) e suas dependencias. 
 * `$ ansible-playbook playbooks/config-all.yml `
 
-![config-all](docs/config-all.png)
+  ![config-all](docs/config-all.png)
 
 Configurar o Ansible.
 * `$ ansible-playbook playbooks/config-ansible.yml ` 
 
-![config-ansible](docs/config-all.png)
+  ![config-ansible](docs/config-all.png)
 
 Validar versão do Python 
 * `$ ansible --version `
 O Python precisa estar como 3 ou superior. Caso ainda não esteja é necessário sair do usuário ubuntu (exit) e sair da VM (exit). E logo após fazer a conexão ssh novamente e validar.
 
-![validar-python](docs/validando-python.png)
+  ![validar-python](docs/validando-python.png)
 
 Validar instalação do AWSCLI
 * `$ aws `
 
-![aws](docs/aws.png)
+  ![aws](docs/aws.png)
 
 
 ## Instalar Docker
@@ -133,7 +133,7 @@ Validar Instalação
 * `$ docker --version `  
 * `$ docker ps ` 
 
-![docker](docs/docker.png)
+  ![docker](docs/docker.png)
 
 Caso o docker ps dê algum erro, sair do usuário ubuntu e da vm. E logo após fazer a conexão ssh e validar, como foi feito para a validação do python.
 
@@ -144,7 +144,7 @@ O Jenkins local também não é pré-requisito para o projeto, mas se quiser ins
 Validar Instalação
    * `$ sudo service jenkins status ` 
 
-![jenkins](docs/jenkins.png)
+  ![jenkins](docs/jenkins.png)
 
 Comandos Úteis
    * Validar status do serviço Jenkins: `$ sudo service jenkins status ` 
@@ -161,9 +161,10 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
    2. Acessar o console da AWS com o user root e ir em:
 
-     * My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
+      * My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
 
-      <b>Importante</b>: Fazer o download das informações.
+      
+       <b>Importante</b>: Fazer o download das informações.
 
    3. Configurar o AWS CLI
 
@@ -171,12 +172,12 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
      Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
 
-     <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
-     <i>AWS Secret Access Key [None]: AWSSecretKey</i> 
-     <i>Default region name [None]: us-east-1</i> 
-     <i>Default output format [None]: json</i>
+      ![aws-configure](docs/aws-configure.png)
 
-    ![aws-configure](docs/aws-configure.png)
+       <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
+       <i>AWS Secret Access Key [None]: AWSSecretKey</i> 
+       <i>Default region name [None]: us-east-1</i> 
+       <i>Default output format [None]: json</i>
 
    4. Alguns comandos para testar:
      * `$ aws iam list-access-keys` 
