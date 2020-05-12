@@ -14,9 +14,13 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
     * Comandos MacOS - Neste exemplo, a pasta de trabalho é o home do usuário.
 
         * `$ cd ~/AcademiaNeon_DevOps `
+
         * `$ pwd `
+
             Exemplo resultado: /home/user/AcademiaNeon_DevOps 
+
         * `$ ls AcademiaNeon_DevOps`
+
             Exemplo resultado: LICENSE       README.md       ansible.cfg         desktop-devops       install_ansible.sh  inventory       playbooks
     
     * Comandos Windows - Neste exemplo, a pasta de trabalho é desktop do usuário
@@ -24,6 +28,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
         * `PS C:\> cd Users\NomeUsuario\Desktop\AcademiaNeon_DevOps `
         
         * `PS C:\Users\NomeUsuario\Desktop\AcademiaNeon_DevOps> dir `
+        
             Deve listar todas as pastas e aqrquivos como no Linux.     
 
 3. Acessar a pasta desktop-devops. Criar a VM Linux. Acessar via ssh. Setar usuário ubuntu. 
@@ -177,12 +182,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
      * `$ aws configure `
 
-       ![aws-configure](docs/aws-configure.png)
-
-        <i>AWS Access Key ID [None]: AWSAccessKeyId</i>                      
-        <i>AWS Secret Access Key [None]: AWSSecretKey</i> 
-        <i>Default region name [None]: us-east-1</i>                                        
-        <i>Default output format [None]: json</i>               
+       ![aws-configure](docs/aws-configure.png)            
 
  4. Alguns comandos para testar:
      * `$ aws iam list-access-keys` 
