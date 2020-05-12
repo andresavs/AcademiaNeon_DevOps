@@ -139,32 +139,36 @@ Caso o docker ps dê algum erro, sair do usuário ubuntu e da vm. E logo após f
 
 ## Instalar Jenkins
 O Jenkins local também não é pré-requisito para o projeto, mas se quiser instalar para utilizar esta vm para estudar, segue orientações.
-* `$ ansible-playbook playbooks/install-jenkins.yml ` 
+   * `$ ansible-playbook playbooks/install-jenkins.yml ` 
 
 Validar Instalação
-* `$ sudo service jenkins status ` 
+   * `$ sudo service jenkins status ` 
 
 ![jenkins](docs/jenkins.png)
 
 Comandos Úteis
-Validar status do serviço Jenkins: `$ sudo service jenkins status ` 
-Validar iniciar serviço Jenkins: `$ sudo service jenkins start` 
-Validar parar serviço Jenkins:`$ sudo service jenkins stop ` 
+   * Validar status do serviço Jenkins: `$ sudo service jenkins status ` 
+   * Validar iniciar serviço Jenkins: `$ sudo service jenkins start` 
+   * Validar parar serviço Jenkins:`$ sudo service jenkins stop ` 
 
 
 ## Configurar AWSCLI
 Para ter acesso aos recursos da aws via linha de comando em nosso desktop de trabalho é necessário configurar as credenciais do seu usuário. Caso queira, por favor, seguir os passos descritos abaixo:
 
    1. Caso não tenha ainda será necessário criar uma conta na [AWS](https://portal.aws.amazon.com/billing/signup#/start). 
+
       <b>Importante</b>: Após criar a conta, sempre fazer o login com o root user.
 
    2. Acessar o console da AWS com o user root e ir em:
+
      * My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
+
       <b>Importante</b>: Fazer o download das informações.
 
    3. Configurar o AWS CLI
+
      * `$ aws configure `
-     
+
      Preencher com as keys da AWS. Colocar a região de trabalho (a us-east-1 é a mais economica no momento) e o formato por padrão é json, mas você pode colocar também.
 
      <i>AWS Access Key ID [None]: AWSAccessKeyId</i>           
