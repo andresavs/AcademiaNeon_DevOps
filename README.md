@@ -93,7 +93,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
                 ![sudo_su-ubuntu](docs/sudo_su-ubuntu.png)
 
 
-    <b>Importante</b>: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
+    **Importante**: Uma vez criada a vm, sempre que desligar, ao precisar utilizar novamente, basta executar o mesmo procedimento.    
 
 
 ## Instalar Ansible
@@ -129,7 +129,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 * Validar versão do Python 
     * `$ ansible --version `
         
-        <b>Importante</b>: O Python precisa estar como 3 ou superior. Caso ainda não esteja é necessário sair do usuário ubuntu (exit) e sair da VM (exit). E logo após fazer a conexão ssh novamente e validar.
+        **Importante**: O Python precisa estar como 3 ou superior. Caso ainda não esteja é necessário sair do usuário ubuntu (exit) e sair da VM (exit). E logo após fazer a conexão ssh novamente e validar.
 
         ![validar-python](docs/validando-python.png)
 
@@ -149,7 +149,7 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 
         ![docker](docs/docker.png)
 
-    <b>Importante</b>: Caso o docker ps dê algum erro, sair do usuário ubuntu e da vm. E logo após fazer a conexão ssh e validar, como foi feito para a validação do python.
+    **Importante**: Caso o docker ps dê algum erro, sair do usuário ubuntu e da vm. E logo após fazer a conexão ssh e validar, como foi feito para a validação do python.
 
 ## Instalar Jenkins
 * O Jenkins local também não é pré-requisito para o projeto, mas se quiser instalar para utilizar esta vm para estudar, segue orientações.
@@ -171,14 +171,14 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
  1. Caso não tenha ainda será necessário criar uma conta na [AWS](https://portal.aws.amazon.com/billing/signup#/start). 
 
-      <b>Importante</b>: Após criar a conta, sempre fazer o login com o root user.
+      **Importante**: Após criar a conta, sempre fazer o login com o root user.
 
  2. Acessar o console da AWS com o user root e ir em:
 
       * My Security Credentials → Access keys (access key ID and secret access key) → Create New Access Key
 
       
-       <b>Importante</b>: Fazer o download das informações.
+       **Importante**: Fazer o download das informações.
 
  3. Configurar o AWS CLI
     
@@ -201,14 +201,14 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
 
 2. Para utilizar o VSCode para atualizar seu repositório que está vm é necessário baixar e instalar um plugin chamado Remote - SSH. 
 
-    <b>Importante</b>: Sempre estar com a vm ligada e conectada via ssh no usuario ubuntu, item 3 do Setup.
+    **Importante**: Sempre estar com a vm ligada e conectada via ssh no usuario ubuntu, item 3 do Setup.
 
     * Primeiro Acesso:
         * Após instalar, conectar na vm com o user ubuntu e apertar F1 no vscode (ou dependendo do computador fn + F1).
             
             ![remote-ssh](docs/f1-remote.png)
 
-        * <b>No primeiro acesso</b> será necessário configurar o host.
+        * **No primeiro acesso** será necessário configurar o host.
             
             ![configure-host](docs/configure-host.png)   
         
@@ -221,7 +221,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
                 
             * [MacOS](https://github.com/andresavs/AcademiaNeon_DevOps/tree/master/docs/config-macos)
 
-            <b>Importante</b> : Alterar de acordo com seu sistema operacional e com o local que fez o git clone do repositório para criar a vm, ou seja, onde voê acessa para executar os comandos vagrant.
+            **Importante**: Alterar de acordo com seu sistema operacional e com o local que fez o git clone do repositório para criar a vm, ou seja, onde voê acessa para executar os comandos vagrant.
 
         * Selecionar o host. 
             Apertar F1 no vscode (ou dependendo do computador fn + F1) e escolher o item 127.0.0.1 ou como você chamou no arquivo config.
@@ -230,7 +230,7 @@ Para ter acesso aos recursos da aws via linha de comando em nosso desktop de tra
             
             ![host](docs/selecionar-host.png)  
 
-        * Uma nova janela do vscode irá abrir e ficará tentando a conexão, <b>no primeiro acesso</b> algumas opções devem aparecer e será necessário selecionar.
+        * Uma nova janela do vscode irá abrir e ficará tentando a conexão, **no primeiro acesso** algumas opções devem aparecer e será necessário selecionar.
             Para Windows escolher Linux e depois Continue, ou apenas continue, caso não apareça. 
             
             ![config-host-adicionais](docs/Linux--Continue.png) 
