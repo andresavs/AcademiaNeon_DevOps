@@ -102,11 +102,17 @@ Para criação do ambiente, vamos utilizar os seguintes itens: [Vagrant](http://
 
         ![git-clone](docs/git-clone.png)
 
+    * Acessar a pasta de trabalho.
+        * `cd AcademiaNeon_DevOps `    
+
 * Executar a instalação do Ansible.
     * `$ bash install_ansible.sh `
 
-* Testar Instalação 
+* Testar Instalação. 
+    Mostrar os comandos disponíveis. 
     * `$ ansible --help ` 
+
+    Testa a conexão local definida no arquivo inventory/hosts
     * `$ ansible local -m ping `
 
 * Validar Versão - Ansible 2.9.7 
